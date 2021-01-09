@@ -4,6 +4,7 @@ import "./Series.css";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import Cardd from "./Cardd";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 function Series() {
   const [allData, setAllData] = useState([]);
@@ -16,6 +17,7 @@ function Series() {
         )
         .then((data) => setAllData(data.data.entries));
     };
+
     fetchData();
   }, []);
 
@@ -35,14 +37,18 @@ function Series() {
       <div className="series_title">
         <Typography variant="h4">Popular Series</Typography>
       </div>
-      <Grid justify="space-evenly" container spacing={0}>
-        {newSeries.map((item, index) => (
-          <Grid item xs={6} sm={3} md={2}>
-            <Cardd key={index} info={item} />
-            {/* {console.log(item.images["Poster Art"].url)} */}
-          </Grid>
-        ))}
-      </Grid>
+      {newSeries.length !== 0 ? (
+        <Grid justify="space-evenly" container spacing={0}>
+          {newSeries.map((item, index) => (
+            <Grid item xs={6} sm={3} md={2}>
+              <Cardd key={index} info={item} />
+              {/* {console.log(item.images["Poster Art"].url)} */}
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
+        <CircularProgress />
+      )}
     </div>
   );
 }

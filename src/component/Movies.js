@@ -4,6 +4,7 @@ import "./Movies.css";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
 import Cardd from "./Cardd";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 function Movies() {
   const [allData, setAllData] = useState([]);
@@ -34,13 +35,17 @@ function Movies() {
       <div className="movies_title">
         <Typography variant="h4">Popular Movies</Typography>
       </div>
-      <Grid justify="space-evenly" container spacing={0}>
-        {newMovies.map((item, index) => (
-          <Grid item xs={6} sm={3} md={2}>
-            <Cardd key={index} info={item} />
-          </Grid>
-        ))}
-      </Grid>
+      {newMovies.length !== 0 ? (
+        <Grid justify="space-evenly" container spacing={0}>
+          {newMovies.map((item, index) => (
+            <Grid item xs={6} sm={3} md={2}>
+              <Cardd key={index} info={item} />
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
+        <CircularProgress />
+      )}
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.movieCard_media {
+  height: 300px;
+  width: 90%;
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.card_conent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

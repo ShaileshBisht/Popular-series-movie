@@ -2,11 +2,11 @@ import { Typography } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import "./Series.css";
 import axios from "axios";
+import Grid from "@material-ui/core/Grid";
+import Cardd from "./Cardd";
 
 function Series() {
   const [allData, setAllData] = useState([]);
-
-  console.log(allData);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +23,7 @@ function Series() {
   const newData = allData.filter((data) => data.programType === "series");
 
   //get first 21 series
-  const series = newData.slice(0, 21);
+  const series = newData?.slice(0, 21);
 
   // arrange series in alphabatic order
   const newSeries = series.sort(function (a, b) {
@@ -36,7 +36,14 @@ function Series() {
       <div className="series_title">
         <Typography variant="h4">Popular Series</Typography>
       </div>
-      <>{newSeries.map((item) => console.log(item.title))}</>
+      <Grid justify="space-evenly" container spacing={3}>
+        {newSeries.map((item, index) => (
+          <Grid item xs={6} sm={3} md={2}>
+            <Cardd key={index} info={item} />
+            {/* {console.log(item.images["Poster Art"].url)} */}
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }

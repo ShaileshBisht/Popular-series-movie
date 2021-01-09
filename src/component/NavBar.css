@@ -1,0 +1,15 @@
+.navBar_title {
+  flex-grow: 1;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navBar_button1 {
+  text-transform: inherit;
+}
+
+.navBar_button2 {
+  background-color: black !important;
+  color: white !important;
+}

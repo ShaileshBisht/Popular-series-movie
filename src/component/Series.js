@@ -29,7 +29,6 @@ function Series() {
   const newSeries = series.sort(function (a, b) {
     return a.title.localeCompare(b.title);
   });
-  console.log(newSeries);
 
   return (
     <div className="series">

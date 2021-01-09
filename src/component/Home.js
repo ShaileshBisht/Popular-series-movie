@@ -17,12 +17,12 @@ function Home() {
         <Grid container spacing={0}>
           <Grid item xs={6} sm={3} md={2}>
             <div onClick={(e) => history.push("/Series")}>
-              <HomeCard title="series" />
+              <HomeCard key="1" title="series" />
             </div>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <div onClick={(e) => history.push("/Movies")}>
-              <HomeCard title="movies" />
+              <HomeCard key="2" title="movies" />
             </div>
           </Grid>
         </Grid>

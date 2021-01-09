@@ -13,4 +13,5 @@
 .home_card {
   margin-top: 40px;
   cursor: pointer;
+  height: 50vh;
 }

@@ -1,8 +1,13 @@
+.cardd {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 10px;
+}
+
 .movieCard_media {
   height: 300px;
-  width: 90%;
+  width: 100%;
   object-fit: contain;
-  margin-left: 20px;
 }
 
 .card_conent {

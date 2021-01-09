@@ -5,6 +5,7 @@ import NavBar from "./component/NavBar";
 import Home from "./component/Home";
 import Series from "./component/Series";
 import Movies from "./component/Movies";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

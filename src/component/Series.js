@@ -35,7 +35,7 @@ function Series() {
       <div className="series_title">
         <Typography variant="h4">Popular Series</Typography>
       </div>
-      <Grid justify="space-evenly" container spacing={3}>
+      <Grid justify="space-evenly" container spacing={0}>
         {newSeries.map((item, index) => (
           <Grid item xs={6} sm={3} md={2}>
             <Cardd key={index} info={item} />

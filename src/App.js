@@ -10,8 +10,8 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path="/movie">movie</Route>
-          <Route path="/series">series</Route>
+          <Route path="/Movies">movie</Route>
+          <Route path="/Series">series</Route>
           <Route path="/">
             <Home />
           </Route>

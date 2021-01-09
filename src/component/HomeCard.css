@@ -1,0 +1,19 @@
+.homeCard {
+  margin-left: 24px;
+  width: 75%;
+  height: 200px;
+}
+
+.top_img {
+  background: url("../assetes/placeholder.png") center center no-repeat;
+  background-color: black;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_img > h1 {
+  color: white;
+  text-transform: uppercase;
+}

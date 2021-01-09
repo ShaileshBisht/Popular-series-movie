@@ -14,7 +14,7 @@ function Home() {
         <Typography variant="h4">Popular Titles</Typography>
       </div>
       <div className="home_card">
-        <Grid container spacing={4}>
+        <Grid container spacing={0}>
           <Grid item xs={6} sm={3} md={2}>
             <div onClick={(e) => history.push("/Series")}>
               <HomeCard title="series" />
